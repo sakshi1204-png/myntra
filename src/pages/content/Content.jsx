@@ -3,8 +3,10 @@ import { Card, CardContent, CardMedia, Container, Grid, Typography, Stack } from
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
+import { useNavigate } from 'react-router-dom';
 
 const Content = () => {
+    const route = useNavigate()
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -142,7 +144,7 @@ const Content = () => {
                     {records.map((record) => (
                         <Grid item xs={6} sm={6} md={3} lg={3} key={record.id}>
                             <Item sx={{ boxShadow: '0px 0px 0px white' }}>
-                                <MyCard sx={{ overflow: 'hidden', boxShadow: '0px 0px 0px white' }}>
+                                <MyCard onClick={()=>route(`/product/${record.id}`)} sx={{ overflow: 'hidden', boxShadow: '0px 0px 0px white' }}>
                                     <CardMedia
                                         sx={{ height: 280, width: '80%', backgroundSize: 'cover', backgroundPosition: 'top' }}
                                         image={record.images[0]} // Use the actual image URL from the fetched data
