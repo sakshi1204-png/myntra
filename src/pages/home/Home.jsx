@@ -4,6 +4,7 @@ import Content from '../content/Content'
 import Middle from '../middle/Middle'
 import Header from '../header/Header'
 import { Box } from '@mui/material'
+import Mine from '../tag/Tag'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
     <Header/>
     <Middle/>
     <Content/>
+    <Mine/>
     <Footer/>
 </Box>
   )

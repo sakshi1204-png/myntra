@@ -140,13 +140,13 @@ const Content = () => {
                 </Box>
             </MyBox>
             <MyBox2 flex={20}>
-                <Grid container spacing={0} wrap="wrap">
+                <Grid container spacing={0} wrap="wrap"sx={{display:'flex',justifyContent:'space-around'}}>
                     {records.map((record) => (
-                        <Grid item xs={6} sm={6} md={3} lg={3} key={record.id}>
+                        <Grid item xs={6} sm={6} md={3} lg={2.3} key={record.id}>
                             <Item sx={{ boxShadow: '0px 0px 0px white' }}>
                                 <MyCard onClick={()=>route(`/product/${record.id}`)} sx={{ overflow: 'hidden', boxShadow: '0px 0px 0px white' }}>
                                     <CardMedia
-                                        sx={{ height: 280, width: '80%', backgroundSize: 'cover', backgroundPosition: 'top' }}
+                                        sx={{ height: 280, width: '100%',objectFit:'contain', backgroundPosition: 'top' }}
                                         image={record.images[0]} // Use the actual image URL from the fetched data
                                         title={record.title} // Use the actual title from the fetched data
                                     />

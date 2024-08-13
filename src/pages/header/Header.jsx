@@ -3,14 +3,14 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import { Container, IconButton, MenuItem } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import logo from './../../asset/myntra.png'
 
@@ -247,10 +247,7 @@ const Header = () => {
                                 <Typography sx={{ display: { xs: 'none', md: 'flex',fontSize:'10px',fontWeight:'bold' } }}>BAG</Typography>
                             </MenuItem>
                         </Rightbox>
-
-
-
-                    </Toolbar>
+                        </Toolbar>
                 </AppBar>
             </Box>
         </>
